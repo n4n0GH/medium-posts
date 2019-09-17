@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Research &amp; Development — Your Money At Work</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Research &amp; Development — Your Money At Work</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Let me give you an update on the current happenings around 0xchan.
+</section>
+<section data-field="body" class="e-content">
+<section name="56d5" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="aefa" id="aefa" class="graf graf--h3 graf--leading graf--title">Research &amp; Development — Your Money At Work</h3><p name="84aa" id="84aa" class="graf graf--p graf-after--h3">Let me give you an update on the current happenings around 0xchan.</p><p name="fbff" id="fbff" class="graf graf--p graf-after--p">First of all we started moving our own infrastructure in place to host an instance of 0xchan; this included, but is not limited to, setting up a proper VPS and IPFS node. The structure for the contracts is also finalized and ready to be turned from pseudo- into actual code. So that’s a good start.</p><p name="e338" id="e338" class="graf graf--p graf-after--p">Main point I wanted to address is the development of the frontend; as some of you may know, I recently developed an idle game (found at <a href="https://github.com/n4n0GH/curvy-idle-game" data-href="https://github.com/n4n0GH/curvy-idle-game" class="markup--anchor markup--p-anchor" rel="nofollow noopener" target="_blank">https://github.com/n4n0GH/curvy-idle-game</a>), that has absolutely nothing to do with 0xchan. What’s up with that? To explain this, I need to go back a few steps and explain what we’re planning with the stand-alone app.</p><p name="feea" id="feea" class="graf graf--p graf-after--p">In the beginning of our research phase we thought about using one of the many available chan sources and build 0xchan on that base, but after some trial and error and encountering heaps of undocumented spaghetticode we decided against using existing systems, not only for our own sake, but for the sake of publishing a well documented end product ourselves.</p><p name="f7b2" id="f7b2" class="graf graf--p graf-after--p">So we had to find a viable solution; one that would allow for rapid prototyping but was also mature enough to be used for 0xchan. Choices right now are really only between few frameworks like React, VueJS or Angular. Research made us choose VueJS over the others because we found a lot of good documentation from other teams who built desktop apps with the use of Electron and VueJS in combination with IPFS that enable us to avoid making the same mistakes those teams did.</p><p name="3bc2" id="3bc2" class="graf graf--p graf-after--p">With VueJS set as the underlying framework to facilitate this venture, I had to do some extensive learning as I was familiar with the general concept of it, but not it’s detailed features and pit-falls. So I studied it with paid and free material while simultaneously prototyping components for 0xchan to use.</p><p name="e86e" id="e86e" class="graf graf--p graf-after--p">Once I was finished with my paid study material, I went on to set my learned things into practice and made the idle game I mentioned earlier. This allowed me to not only work on a streamlined code structure, but also to test some things during development that will come in handy for the inevitable 0xchan rewrite.</p><p name="6936" id="6936" class="graf graf--p graf-after--p">Right now 0xchan exists in a mess of code. But it’s sort of working (with offline data). Once all parts have been assembled I’ll work on refactoring everything, making components that make sense and get it to a state of minimal code, well documented and up on Github for you to look at or clone. In fact, this will be a base for anyone looking to make a new chan with whatever Database they decide to use, but a more modern framework underneath, so I guess that’s a nice thing to have.</p><p name="bee8" id="bee8" class="graf graf--p graf-after--p">How does this work in conjunction with the desktop application though?</p><figure name="7f85" id="7f85" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 651px; max-height: 231px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 35.5%;"></div><img class="graf-image" data-image-id="1*exfvX-EwhayfVF-mSF37WA.png" data-width="651" data-height="231" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*exfvX-EwhayfVF-mSF37WA.png"></div></figure><p name="28e8" id="28e8" class="graf graf--p graf-after--figure">One possibility to create a desktop application that makes it truly impossible to stop the use of 0xchan is to let users run a client on their machine that hosts a local webserver and IPFS node (optional). Everything gets served to the user’s browser and they can user 0xchan like they would any other website. We favored this approach over another idea we had where the user would essentially run a sandboxed browser environment with it’s own metamask implemented. The security risk for this is too high when users run outdated versions of the client and some issue was found in the metamask implementation so we’d rather not have you risk losing your Ether due to that.</p><p name="7f75" id="7f75" class="graf graf--p graf-after--p graf--trailing">The chosen approach could potentially also run on a smartphone or tablet that supports running those processes (mainly node.js) on their machines and then users could access it via Trustwallet or other applications that allow to interact with Web3 components.</p></div></div></section><section name="70d5" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="c0c4" id="c0c4" class="graf graf--p graf--leading">So how far are we away from an actual first release? I can see a testnet release with a fully rewritten codebase to try out functionality with a broader userbase happen around the end of September to mid October if development can proceed like it did so far (i.e. no one ends up in hospital or something like that).</p><p name="c054" id="c054" class="graf graf--p graf-after--p graf--trailing">We’re all gonna make it.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@sumpunk" class="p-author h-card">sumpunk</a> on <a href="https://medium.com/p/db95417f4ca2"><time class="dt-published" datetime="2019-08-18T18:14:20.744Z">August 18, 2019</time></a>.</p><p><a href="https://medium.com/@sumpunk/research-development-your-money-at-work-db95417f4ca2" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on September 17, 2019.</p></footer></article></body></html>

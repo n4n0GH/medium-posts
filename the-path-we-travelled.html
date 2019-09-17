@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>The Path We Travelled — On The Current State of 0xchan</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">The Path We Travelled — On The Current State of 0xchan</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Development has kicked the volume up to 11. If you’re part of our Discord server you already know that a lot has happened since last time.
+</section>
+<section data-field="body" class="e-content">
+<section name="0ada" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="2f61" id="2f61" class="graf graf--h3 graf--leading graf--title">The Path We Travelled — On The Current State of 0xchan</h3><p name="5d5b" id="5d5b" class="graf graf--p graf-after--h3">Development has kicked the volume up to 11. If you’re part of our Discord server you already know that a lot has happened since the last blog post. And if you’re not on Discord, fear not for here comes an update — and it’s loaded.</p></div><div class="section-inner sectionLayout--outsetColumn"><figure name="23c6" id="23c6" class="graf graf--figure graf--layoutOutsetCenter graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 1032px; max-height: 454px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 44%;"></div><img class="graf-image" data-image-id="1*gwZPCjub0VtV2OVRbePzIw.jpeg" data-width="2800" data-height="1232" data-is-featured="true" src="https://cdn-images-1.medium.com/max/1200/1*gwZPCjub0VtV2OVRbePzIw.jpeg"></div><figcaption class="imageCaption">Lively discussion in ancient roman senate on the topic of why your waifu is trash (Cesare Maccari, 1889)</figcaption></figure></div><div class="section-inner sectionLayout--insetColumn"><p name="e24a" id="e24a" class="graf graf--p graf-after--figure">To start things off, let me say that the UI in it’s current state could be deployed and connected to a database and it’d have read/write functionality. So once we got around to finish some more modules and introducing web3 to it, we’re going straight into testnet mode. So that’s the TL;DR. Now let’s get into the juicy bits. And yes, this is all rendered in a browser, no mockups. The content shown in the screenshots is graciously taken from 4chan, by scraping several boards with <a href="https://gist.github.com/n4n0GH/a050f027344e0060814fb67d46d54ac6" data-href="https://gist.github.com/n4n0GH/a050f027344e0060814fb67d46d54ac6" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">this piece of junk</a>. The JSON file I constructed <a href="https://ipfs.globalupload.io/QmTBxkQmp5dEqSspHELZRqUrWt5Neb62MGxg7opAcedpvE" data-href="https://ipfs.globalupload.io/QmTBxkQmp5dEqSspHELZRqUrWt5Neb62MGxg7opAcedpvE" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">can be found on IPFS</a>.</p><p name="7dc7" id="7dc7" class="graf graf--p graf-after--p">When you first use 0xchan, it’s set up to run in something we call “SFW Mode”. In this mode 0xchan will not automatically grab images. This also means we dropped the idea of including a “NSFW” badge for certain boards to remove clutter on the UI. Instead we now treat everything as potentially NSFW.</p><figure name="4df9" id="4df9" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 370px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 52.900000000000006%;"></div><img class="graf-image" data-image-id="1*79xAht61jKsE7Rt4v-sbig.png" data-width="1903" data-height="1006" src="https://cdn-images-1.medium.com/max/800/1*79xAht61jKsE7Rt4v-sbig.png"></div><figcaption class="imageCaption">Start page with a visible board selection, open disclaimer and most recent posts</figcaption></figure><p name="7ee1" id="7ee1" class="graf graf--p graf-after--figure">The visual appearance is meant to mimic the “Yotsuba B” theme on 4chan, which indicates safe for work boards. If you turn the SFW Mode off, the style will automatically switch to a “Yotsuba” inspired theme. Speaking of themes, you can even add your own styles if you so prefer or select from a limited range of pre-defined themes.</p><figure name="5470" id="5470" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 850px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 121.39999999999999%;"></div><img class="graf-image" data-image-id="1*fCq1BhaqjGvQKp0E9oQ8XQ.png" data-width="785" data-height="953" src="https://cdn-images-1.medium.com/max/800/1*fCq1BhaqjGvQKp0E9oQ8XQ.png"></div><figcaption class="imageCaption">Settings page with all current settings shown</figcaption></figure><p name="f5db" id="f5db" class="graf graf--p graf-after--figure">In general there are some settings for the users to play with, and quite a few more are planned for the future.</p><p name="de20" id="de20" class="graf graf--p graf-after--p">A single board gives you a yet to be defined amount (currently 10) of posts per page and displays them sorted by date of most recent reply within a thread or if no replies exist for a thread then it’s using the OP date to compare dates for sorting.</p></div><div class="section-inner sectionLayout--outsetColumn"><figure name="134e" id="134e" class="graf graf--figure graf--layoutOutsetCenter graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 1032px; max-height: 581px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 56.3%;"></div><img class="graf-image" data-image-id="1*T2lCLcbCBMRcZgUBv9YEzQ.jpeg" data-width="1920" data-height="1080" src="https://cdn-images-1.medium.com/max/1200/1*T2lCLcbCBMRcZgUBv9YEzQ.jpeg"></div><figcaption class="imageCaption">Comparison of SFW Mode off (left) and on (right), showing different boards</figcaption></figure></div><div class="section-inner sectionLayout--insetColumn"><figure name="9238" id="9238" class="graf graf--figure graf--layoutOutsetLeft graf-after--figure"><div class="aspectRatioPlaceholder is-locked" style="max-width: 525px; max-height: 204px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 38.9%;"></div><img class="graf-image" data-image-id="1*XxzatYQg3abytieDhcZOYw.jpeg" data-width="900" data-height="350" src="https://cdn-images-1.medium.com/max/600/1*XxzatYQg3abytieDhcZOYw.jpeg"></div></figure><p name="ceb7" id="ceb7" class="graf graf--p graf-after--figure">A single post has various features to enable interaction with the content by clicking different things, as shown in the image on the left. Some functions like hiding a thread and viewing a thread are obviously only available on OP and missing on regular replies.</p><p name="4d4c" id="4d4c" class="graf graf--p graf-after--p">The catalog view will pull all OPs on the current board and list them as minified objects so users can quickly find the OP they were looking for.</p><figure name="308b" id="308b" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 539px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 76.9%;"></div><img class="graf-image" data-image-id="1*fDv7RJrIQqnNhoEaabu4bw.png" data-width="1903" data-height="1464" src="https://cdn-images-1.medium.com/max/800/1*fDv7RJrIQqnNhoEaabu4bw.png"></div></figure><p name="f636" id="f636" class="graf graf--p graf-after--figure">This view also allows to hide threads and will not automatically fetch image files when the SFW Mode is turned on.</p><p name="73a2" id="73a2" class="graf graf--p graf-after--p">And that’s it for now. There are some additional spicy things I haven’t shown in this post, but you’ll see them soon enough.</p><p name="cb0e" id="cb0e" class="graf graf--p graf-after--p graf--trailing">As always, thanks for your support ❤</p></div></div></section><section name="c179" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="e53f" id="e53f" class="graf graf--p graf--leading graf--trailing">I’ll be covering the development process of 0xchan through a series of Medium posts. If you want to keep updated or interact with our growing community, feel free to follow my Medium account, <a href="https://twitter.com/0xchan" data-href="https://twitter.com/0xchan" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">follow our Twitter</a> or <a href="https://discord.gg/v8cnd4w" data-href="https://discord.gg/v8cnd4w" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">join our Discord</a>.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@sumpunk" class="p-author h-card">sumpunk</a> on <a href="https://medium.com/p/9988c80d7be8"><time class="dt-published" datetime="2019-09-01T10:02:21.372Z">September 1, 2019</time></a>.</p><p><a href="https://medium.com/@sumpunk/the-path-we-travelled-on-the-current-state-of-0xchan-9988c80d7be8" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on September 17, 2019.</p></footer></article></body></html>
